@@ -49,11 +49,15 @@ export class EquationComponent {
   }
 
   get a() {
-    return this.mathForm.value.a;
+    return this.mathForm.value.a!;
   }
 
   get b() {
-    return this.mathForm.value.b;
+    return this.mathForm.value.b!;
+  }
+
+  get answer() {
+    return parseInt(this.mathForm.value.answer!);
   }
 
   randomNumber() {
