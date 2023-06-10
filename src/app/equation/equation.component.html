@@ -1,9 +1,6 @@
 <form action="" [formGroup]="mathForm">
   <div class="equation">{{ a }} + {{ b }} =</div>
-  <input
-    [ngClass]="{ highlight: (a + b) * 0.9 < answer && answer < (a + b) * 1.1 }"
-    formControlName="answer"
-  />
+  <input appAnswerHighlight formControlName="answer" />
 </form>
 
 <div class="stats">
